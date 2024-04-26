@@ -1,0 +1,53 @@
+<!-- Gage Eslick April 26th 2024-->
+<!DOCTYPE html>
+<html lang="en">
+    <!--The title of the website-->
+<head>
+    <title>Random Music Generator - Home</title>
+    <link rel="stylesheet for music gen" href="stylesheet_for_music_gen.css">
+</head>
+<body>
+    <!--The subtitle of the website with the navigation section-->
+    <header>
+        <h1>Random Music Generator</h1>
+        <nav>
+            <ul>
+                <li><a href="Music_genre.html" class="nav-Link">Home</a></li>
+                <li><a href="about.html" class="nav-Link">About</a></li>
+                <li><a href="contact.html" class="nav-Link">Contact</a></li>
+                <li><a href="statistics.html" class="nav-Link">Statistics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--This is the description of what the button will do and this is the code of the button being created-->
+    <main>
+        <section id="home">
+            <p>This is the home page with the random generator</p>
+        </section>
+            <h2>Random Genre and Era</h2>
+            <p>Click the button below to generate a random music genre and era.</p>
+            <button id="Click Me" onclick="generateRandom()">Click Me!!!</button>
+            <div id="output"></div>
+        </section>
+    </main>
+    <!--This is a footer making sure that the user knows that all the music suggestions the website gives is reserved to the owner-->
+    <footer>
+        <p>&copy; 2024 Random Music Generator. All music rights reserved to owner.</p>
+        <img src="Stock_music_notes.jpg" alt="Stock Music Notes" style="display: block; margin: 0 auto;">
+    </footer>
+    <!--This is the scriprt for the random generation for music-->
+    <script>
+        
+        function generateRandom() {
+            var genres = ["Rock", "Pop", "Jazz", "Hip Hop", "EDM", "Classical"];
+            var eras = ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"];
+
+            var randomGenre = genres[Math.floor(Math.random() * genres.length)];
+            var randomEra = eras[Math.floor(Math.random() * eras.length)];
+
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "<p>Your random music suggestion is: " + randomGenre + " from the " + randomEra + ".<p>";
+        }
+    </script>
+</body>    
+</html>
